@@ -3,11 +3,23 @@ import time
 import random
 import pandas as pd
 
+st.set_page_config(
+    page_title="My rehab exercises",
+    page_icon="images/favicon.ico",
+    layout="centered",
+    initial_sidebar_state="auto",
+    #menu_items={
+        #'Get Help': '<<URL>>',
+        #'Report a bug': "<<URL>>",
+        #'About': "Made with Streamlit v1.27"
+    #}
+)
+
 # Get struct_time and strip full weekday name from it (%A)
 day=time.strftime("%A", time.localtime())
 
 
-
+st.image('images/logo.svg', width=100)
 st.header(day + "'s exercises")
 
 # a dictionary of 3 lists: 1. Exercise names; 2. Video URLs showing how to perform the exercises; 3. The start time in seconds of the relevant bit in the video
@@ -36,7 +48,8 @@ for i in exercises:
     number +=1
     tab_text, tab_video = st.tabs(["Exercise " + "%.0f" % number, "Video"])
     with tab_text:
-        st.write(table.iloc[i, 0])
+        st.write(f"**{table.iloc[i, 0]}**")
+        st.write("\n")
 
     with tab_video:
         st.video(table.iloc[i, 1], start_time=table.iloc[i,2]) 
