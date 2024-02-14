@@ -24,9 +24,9 @@ st.header(day + "'s rehab exercises")
 
 # a dictionary of 3 lists: 1. Exercise names; 2. Video URLs showing how to perform the exercises; 3. The start time in seconds of the relevant bit in the video
 database={
-    'Exercise name': ["Curl up", "Bird dog", "Side plank", "Knee off bed", "Scorpion roll", "SI joint corkscrew", "Windscreen/piriformis rolls", "Tennis ball release", "Donkey kicks", "90\u2070:90\u2070 sacrum lifts", "Wall sits", "Single leg squats", "Clam shells", "Fire hydrants", "Bridges/thrusts/donkey kicks", "Side lying hip abduction", "90\u2070 wall ball roll", "Ball-wall deadlift"],
-    'Video':["https://www.youtube.com/watch?v=2_e4I-brfqs", "https://www.youtube.com/watch?v=2_e4I-brfqs", "https://www.youtube.com/watch?v=2_e4I-brfqs", "https://www.youtube.com/watch?v=W8aPYm-CHIk", "https://www.youtube.com/watch?v=W8aPYm-CHIk", "https://www.youtube.com/watch?v=W8aPYm-CHIk", "https://www.youtube.com/watch?v=W8aPYm-CHIk", "https://www.youtube.com/watch?v=7KYfGH8daJk", "https://www.youtube.com/watch?v=7KYfGH8daJk", "https://www.youtube.com/watch?v=Z-J6rSUpmN4", "https://www.youtube.com/watch?v=Z-J6rSUpmN4", "https://www.youtube.com/watch?v=Z-J6rSUpmN4", "https://www.youtube.com/watch?v=IcmDsB3wdEk", "https://www.youtube.com/watch?v=IcmDsB3wdEk", "https://www.youtube.com/watch?v=IcmDsB3wdEk", "https://www.youtube.com/watch?v=IcmDsB3wdEk", "https://www.youtube.com/watch?v=Qhk6nrorgT8", "https://www.youtube.com/watch?v=Qhk6nrorgT8"],
-    'Start time':[68, 295, 205, 58, 323, 446, 603, 71, 524, 169, 377, 686, 474, 490, 505, 524, 279, 396]
+    'Exercise name': ["Curl up", "Bird dog", "Side plank", "Knee off bed", "Scorpion roll", "SI joint corkscrew", "Windscreen/piriformis rolls", "Tennis ball release", "Donkey kicks", "90\u2070:90\u2070 sacrum lifts", "Wall sits", "Single leg squats", "Clam shells", "Fire hydrants", "Bridges/thrusts/donkey kicks", "Side lying hip abduction", "90\u2070 wall ball roll", "Ball-wall deadlift", "Copenhagens", "Ball squeeze glute bridges", "Banded butterfly bridges", "Reverse lunge step ups"],
+    'Video':["https://www.youtube.com/watch?v=2_e4I-brfqs", "https://www.youtube.com/watch?v=2_e4I-brfqs", "https://www.youtube.com/watch?v=2_e4I-brfqs", "https://www.youtube.com/watch?v=W8aPYm-CHIk", "https://www.youtube.com/watch?v=W8aPYm-CHIk", "https://www.youtube.com/watch?v=W8aPYm-CHIk", "https://www.youtube.com/watch?v=W8aPYm-CHIk", "https://www.youtube.com/watch?v=7KYfGH8daJk", "https://www.youtube.com/watch?v=7KYfGH8daJk", "https://www.youtube.com/watch?v=Z-J6rSUpmN4", "https://www.youtube.com/watch?v=Z-J6rSUpmN4", "https://www.youtube.com/watch?v=Z-J6rSUpmN4", "https://www.youtube.com/watch?v=IcmDsB3wdEk", "https://www.youtube.com/watch?v=IcmDsB3wdEk", "https://www.youtube.com/watch?v=IcmDsB3wdEk", "https://www.youtube.com/watch?v=IcmDsB3wdEk", "https://www.youtube.com/watch?v=Qhk6nrorgT8", "https://www.youtube.com/watch?v=Qhk6nrorgT8", "https://www.youtube.com/watch?v=CjinhqRzcaY", "https://www.youtube.com/watch?v=s2bqEP1O6_s", "https://www.youtube.com/watch?v=s2bqEP1O6_s", "https://www.youtube.com/watch?v=Siw3bgdJE80"],
+    'Start time':[68, 295, 205, 58, 323, 446, 603, 71, 524, 169, 377, 686, 474, 490, 505, 524, 279, 397, 0, 430, 334, 111]
 }
 
 # Pass database to pandas dataframe constructor to make 'table'
@@ -36,7 +36,7 @@ table = pd.DataFrame(database)
 #table
 
 # pick 6 rows at random from 18 and put in list 'exercises'
-exercises = random.sample(range(0,18), 6)
+exercises = random.sample(range(0,22), 6)
 #exercises
 
 #initialise counter 'number'
