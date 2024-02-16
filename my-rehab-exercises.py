@@ -3,6 +3,13 @@ import time
 import random
 import pandas as pd
 
+# pick 6 rows at random from number of rows in 'table' (i.e. range(0, len(table)) ) and put in list 'choices'
+# cache data so it only runs 1st time and doesn't re-run every time user clicks something
+@st.cache_data
+def choose():
+    choices = random.sample(range(0,len(table)), 6)
+    return choices
+
 st.set_page_config(
     page_title="My rehab exercises",
     page_icon="images/favicon.ico",
@@ -35,8 +42,8 @@ table = pd.DataFrame(database)
 
 #table
 
-# pick 6 rows at random from 18 and put in list 'exercises'
-exercises = random.sample(range(0,22), 6)
+# call chose function which picks 6 exercises at random from the table
+exercises = choose()
 #exercises
 
 #initialise counter 'number'
@@ -107,7 +114,9 @@ elif day=="Monday":
     st.video('https://www.youtube.com/watch?v=8fipKUJzcuk')
 elif day=="Wednesday":
     st.write('15 minutes of hardcore calisthenic strength work.')
-    st.video('https://www.youtube.com/watch?v=7PfE9X-TFsY')
+    st.video("https://www.youtube.com/watch?v=gnTzk1yUHB4", start_time=58)
+    st.write('If that\'s too much try [this one by Vitality](https://www.youtube.com/watch?v=7PfE9X-TFsY) (with its questionable song lyrics)')
+    st.write('Or, even easier, [start with this one](https://www.youtube.com/watch?v=XX1-nL9oM2E) which has 2 identical rounds of exercises. Do just the first round, building up to doing both with time')
 else:
     st.write('Relax. Breathe deep, get into your own head and feel your chakras. 20 minutes of yoga.')
     st.video('https://www.youtube.com/watch?v=b1H3xO3x_Js')
