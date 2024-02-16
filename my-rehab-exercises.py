@@ -5,7 +5,8 @@ import pandas as pd
 
 # pick 6 rows at random from number of rows in 'table' (i.e. range(0, len(table)) ) and put in list 'choices'
 # cache data so it only runs 1st time and doesn't re-run every time user clicks something
-@st.cache_data(ttl=10)
+# only cache the data for half an hour (ttl=1800) so all users aren't stuck with the same exercises forever
+@st.cache_data(ttl=1800)
 def choose():
     choices = random.sample(range(0,len(table)), 6)
     return choices
