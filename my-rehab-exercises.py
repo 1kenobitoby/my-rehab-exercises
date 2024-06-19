@@ -28,6 +28,32 @@ day=time.strftime("%A", time.localtime())
 
 
 st.image('images/logo.svg', width=100)
+
+st.header(day + "'s morning workout")
+if day=="Saturday":
+    st.write('Tai chi')
+    st.video("https://www.youtube.com/watch?v=bcpelNJTDbY&list=PLOVqXurkiiguTMQ3CChjHEwR0EVDrqZy1", start_time=1382)
+    st.write('More at [this playlist](https://www.youtube.com/playlist?list=PLOVqXurkiiguTMQ3CChjHEwR0EVDrqZy1)')
+elif day=="Sunday":
+    st.write('Gym work')   
+elif day=="Monday":
+    st.write('Resistance band workout')
+    st.video('https://www.youtube.com/watch?v=mdFM2msfsbw')
+elif day=="Tuesday":
+    st.write('Pilates')
+    st.video('https://www.youtube.com/watch?v=nnt34RN74Rs&list=PLipSZg1JNsC9DZcCHkgjHwIIP1jMnRrr0')
+elif day=="Wednesday":
+    st.write('Gym work')
+elif day=="Thursday":
+    st.write('Suspension training')
+    st.video('https://www.youtube.com/watch?v=ohvltD4Vm1Q')
+    st.write('Or try [this one](https://www.youtube.com/watch?v=MsWU3VKUduA)')
+else:
+    st.write('Mini resistance band workout')
+    st.video('https://www.youtube.com/watch?v=X2BUjWHPOOo') 
+
+st.divider()
+
 st.header(day + "'s rehab exercises")
 
 # a dictionary of 3 lists: 1. Exercise names; 2. Video URLs showing how to perform the exercises; 3. The start time in seconds of the relevant bit in the video
@@ -75,8 +101,8 @@ elif day=="Monday":
     st.video('https://www.youtube.com/watch?v=FX-R98zU5MI')
 elif day=="Tuesday":
     st.image('images/day_2.png')
-elif day=="Wendesday":
-    st.image('https://www.youtube.com/watch?v=ui3ToKZtKIs', start_time=30)
+elif day=="Wednesday":
+    st.video('https://www.youtube.com/watch?v=ui3ToKZtKIs', start_time=30)
 elif day=="Thursday":
     st.image('images/day_3.png')
 else:
