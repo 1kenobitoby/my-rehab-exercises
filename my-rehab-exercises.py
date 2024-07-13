@@ -32,8 +32,8 @@ st.image('images/logo.svg', width=100)
 st.header(day + "'s morning workout")
 if day=="Saturday":
     st.write('Tai chi')
-    st.video("https://www.youtube.com/watch?v=apIffYvzuS0")
-    st.write('More at [this playlist](https://www.youtube.com/playlist?list=PLOVqXurkiiguTMQ3CChjHEwR0EVDrqZy1)')
+    st.video("https://www.youtube.com/watch?v=NsZaY-EMpiA")
+    st.write('More at [this playlist](https://www.youtube.com/playlist?list=PLMd1sFT4IdyZfsMxiILGDQRha1pPHb3pT)')
 elif day=="Sunday":
     st.write('Gym work')   
 elif day=="Monday":
